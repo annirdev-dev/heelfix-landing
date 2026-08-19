@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Privacy Policy — HeelFix</title>
+  <meta name="description" content="Privacy Policy for HeelFix: Understand how we handle user data, foot images, AI analysis, and on-device storage." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <span class="brand-name">HeelFix</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="/" class="btn btn-secondary btn-sm">
+          &larr; Back to Home
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legal Document Content -->
+  <main class="legal-main">
+    <div class="legal-container">
+      <div class="legal-header">
+        <span class="section-tag">Legal Document</span>
+        <h1 class="legal-title">Privacy Policy</h1>
+        <p class="legal-date">Effective Date: August 18, 2026</p>
+      </div>
+
+      <div class="legal-cards">
+        <div class="legal-card">
+          <h2>1. Overview & Commitment</h2>
+          <p>We respect your privacy. This Privacy Policy explains how HeelFix handles user data, foot images, AI analysis, local progress data, and subscription information.</p>
+        </div>
+
+        <div class="legal-card">
+          <h2>2. Account Data & Authentication</h2>
+          <p>HeelFix operates locally without mandatory user accounts or server sign-in. We do not collect your real name, email address, or phone number during normal app usage.</p>
+        </div>
+
+        <div class="legal-card">
+          <h2>3. Heel Photo Processing & AI Staging</h2>
+          <ul class="legal-list">
+            <li><strong>Processing:</strong> When you capture a photo, it is securely transmitted over HTTPS with iOS DeviceCheck verification.</li>
+            <li><strong>Analysis:</strong> Photos are evaluated transiently via the Google Gemini API to analyze dryness, cracks, callus, and skin texture.</li>
+            <li><strong>Retention:</strong> Images sent to the AI API are processed ephemerally for severity scoring and are NOT retained on remote AI servers or used for public AI training.</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h2>4. On-Device Storage & Security</h2>
+          <p>All scan history, progress logs, images, and routine preferences are saved locally on your device via SwiftData and UserDefaults. You retain full control of your local data.</p>
+        </div>
+
+        <div class="legal-card">
+          <h2>5. Subscription & Payment Information</h2>
+          <p>Subscriptions and payments are managed entirely by Apple App Store using StoreKit 2. We do not receive, store, or process your credit card numbers or financial credentials.</p>
+        </div>
+
+        <div class="legal-card">
+          <h2>6. Data Retention, Export & Deletion</h2>
+          <p>You may export your scan records or permanently wipe all locally stored data at any time directly within the app under <em>Settings → Delete All My Data</em>.</p>
+        </div>
+
+        <div class="legal-card">
+          <h2>7. Contact Information</h2>
+          <p>For privacy questions, data requests, or compliance inquiries, please reach out to:</p>
+          <p class="legal-contact"><strong>Privacy Email:</strong> <a href="mailto:annirdev@gmail.com">annirdev@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="/" class="brand-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="brand-name">HeelFix</span>
+        </a>
+        <p class="footer-tagline">Understand Your Heel Skin. Track Your Progress.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="/#ai-analysis">AI Analysis</a>
+          <a href="/#progress-tracking">Progress Tracking</a>
+          <a href="/#premium">Premium</a>
+          <a href="/#guide">Skin Guide</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <a href="/contact.html">Contact Us</a>
+          <a href="#safety">Medical Disclaimer</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HeelFix. All rights reserved. Not a medical device.</p>
+    </div>
+  </footer>
+
+  <!-- Medical Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimerModal" aria-hidden="true" role="dialog" aria-labelledby="disclaimerTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeDisclaimer" aria-label="Close disclaimer modal">&times;</button>
+      <div class="safety-card modal-safety-card">
+        <div class="safety-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        </div>
+        <div class="safety-content">
+          <h3 id="disclaimerTitle">Medical Disclaimer & Professional Care Guidance</h3>
+          <p>
+            HeelFix is strictly an educational and visual self-tracking application. It does <strong>not</strong> provide medical diagnoses, treatment advice, or clinical evaluations.
+          </p>
+          <p class="safety-warning">
+            <strong>When to see a doctor:</strong> If your heel cracks are deep, painful, bleeding, showing signs of infection (redness, warmth, pus), or if you have diabetes, neuropathy, or poor circulation, consult a qualified podiatrist or healthcare professional immediately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

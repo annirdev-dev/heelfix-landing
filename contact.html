@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Contact Us — HeelFix</title>
+  <meta name="description" content="Contact the HeelFix support team for assistance, feedback, subscription inquiries, or privacy requests." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <span class="brand-name">HeelFix</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="/" class="btn btn-secondary btn-sm">
+          &larr; Back to Home
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Section Main -->
+  <main class="contact-main">
+    <div class="container contact-container">
+      <div class="contact-header">
+        <span class="section-tag">Get in Touch</span>
+        <h1 class="contact-title">Contact Support</h1>
+        <p class="contact-subtitle">
+          Have a question about HeelFix, need technical assistance with your scans, or want to provide feedback? We are here to help.
+        </p>
+      </div>
+
+      <!-- Form Card -->
+      <div class="contact-form-card" id="formCard">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contactName">Your Name <span class="required-star">*</span></label>
+            <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Smith" required />
+            <span class="form-error" id="nameError">Please enter your name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email Address <span class="required-star">*</span></label>
+            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="alex@example.com" required />
+            <span class="form-error" id="emailError">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactTopic">Inquiry Topic <span class="required-star">*</span></label>
+            <select id="contactTopic" name="topic" class="form-input form-select" required>
+              <option value="" disabled selected>Select a topic...</option>
+              <option value="General Support">General Support & Guidance</option>
+              <option value="Technical Issue">Technical / Scanning Issue</option>
+              <option value="Subscription & Billing">Subscription & Billing Help</option>
+              <option value="Privacy & Data Request">Privacy & Data Request</option>
+              <option value="Feedback & Suggestions">Feedback & Feature Suggestions</option>
+            </select>
+            <span class="form-error" id="topicError">Please select a topic.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message <span class="required-star">*</span></label>
+            <textarea id="contactMessage" name="message" class="form-input form-textarea" rows="5" placeholder="How can we assist you with HeelFix?" required></textarea>
+            <span class="form-error" id="messageError">Please enter your message (at least 10 characters).</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg full-width" id="submitBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>Send Message</span>
+          </button>
+        </form>
+
+        <!-- Success State (Hidden by default) -->
+        <div class="contact-success" id="contactSuccess" style="display: none;">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3>Message Sent Successfully!</h3>
+          <p id="successMessageText">
+            Thank you for reaching out. We have received your inquiry and will reply to your email shortly.
+          </p>
+          <div class="success-actions">
+            <a href="mailto:annirdev@gmail.com" id="directMailLink" class="btn btn-primary btn-sm">
+              Open in Email App
+            </a>
+            <button type="button" class="btn btn-secondary btn-sm" id="sendAnotherBtn">
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="/" class="brand-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="brand-name">HeelFix</span>
+        </a>
+        <p class="footer-tagline">Understand Your Heel Skin. Track Your Progress.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="/#ai-analysis">AI Analysis</a>
+          <a href="/#progress-tracking">Progress Tracking</a>
+          <a href="/#premium">Premium</a>
+          <a href="/#guide">Skin Guide</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <a href="/contact.html">Contact Us</a>
+          <a href="#safety">Medical Disclaimer</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HeelFix. All rights reserved. Not a medical device.</p>
+    </div>
+  </footer>
+
+  <!-- Medical Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimerModal" aria-hidden="true" role="dialog" aria-labelledby="disclaimerTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeDisclaimer" aria-label="Close disclaimer modal">&times;</button>
+      <div class="safety-card modal-safety-card">
+        <div class="safety-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        </div>
+        <div class="safety-content">
+          <h3 id="disclaimerTitle">Medical Disclaimer & Professional Care Guidance</h3>
+          <p>
+            HeelFix is strictly an educational and visual self-tracking application. It does <strong>not</strong> provide medical diagnoses, treatment advice, or clinical evaluations.
+          </p>
+          <p class="safety-warning">
+            <strong>When to see a doctor:</strong> If your heel cracks are deep, painful, bleeding, showing signs of infection (redness, warmth, pus), or if you have diabetes, neuropathy, or poor circulation, consult a qualified podiatrist or healthcare professional immediately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

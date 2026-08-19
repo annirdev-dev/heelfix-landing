@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeelFix — Understand Your Heel Skin & Track Visual Progress</title>
+  <meta name="description" content="Analyze dry, cracked, and peeling heels with HeelFix. Track visual skin progress over time with AI photo analysis, personalized routine guidance, and smart follow-up comparisons." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://heelfix.app/" />
+
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://heelfix.app/" />
+  <meta property="og:title" content="HeelFix — Understand Your Heel Skin & Track Visual Progress" />
+  <meta property="og:description" content="Analyze dry, cracked, and peeling heels with HeelFix. Track visual skin progress over time with AI photo analysis, personalized care guidance, and smart follow-up comparisons." />
+  <meta property="og:image" content="https://heelfix.app/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Structured Data: MobileApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "HeelFix",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "description": "HeelFix helps users understand and visually track changes in their heel skin over time using AI-powered photo analysis and personalized care routines.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is HeelFix a medical diagnostic tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HeelFix is a visual self-awareness and progress tracking tool. It does not provide medical diagnoses, treatment plans, or clinical evaluations. Always consult a licensed podiatrist or physician for medical concerns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does HeelFix analyze heel skin photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HeelFix uses computer vision algorithms to evaluate visible skin texture, crack depth indicators, and surface dryness patterns, categorizing results into clear visual severity tiers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I scan my heels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your scan result determines your recommended follow-up window (typically 2 to 7 days). Scanning after the recommended interval allows visible skin improvements to occur naturally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does progress tracking work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HeelFix compares your baseline scan (Day 0) against follow-up scans taken on or after your recommended date, charting your weekly overall skin health score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my heel photos private and secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your photos are stored securely on your device and processed with privacy-first standards. Your personal data is never sold or shared."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" aria-label="HeelFix Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <span class="brand-name">HeelFix</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#ai-analysis">AI Analysis</a>
+        <a href="#progress-tracking">Progress Tracking</a>
+        <a href="#premium">Premium</a>
+        <a href="#guide">Skin Guide</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://apps.apple.com/app/heelfix/id123456789" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          Download App
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="dot"></span>
+          <span>AI-Powered Heel Skin Tracker</span>
+        </div>
+        <h1 class="hero-title">Understand Your Heel Skin. <span class="highlight">Track Your Progress.</span></h1>
+        <p class="hero-subtitle">
+          Use HeelFix to analyze your heel photos, follow personalized care guidance, and track visible skin changes over time.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://apps.apple.com/app/heelfix/id123456789" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.36c.66-.8 1.11-1.92.99-3.04-.96.04-2.13.64-2.82 1.44-.61.71-1.15 1.86-1.01 2.96 1.07.08 2.18-.55 2.84-1.36z"/></svg>
+            <span>Download HeelFix</span>
+          </a>
+          <a href="#ai-analysis" class="btn btn-secondary btn-lg">
+            <span>See How It Works</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-badges">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Privacy-First & Secure</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Smart Follow-Up Timing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual (iPhone Mockup with Real Screenshot) -->
+      <div class="hero-visual">
+        <div class="phone-mockup-frame hero-phone">
+          <div class="phone-dynamic-island"></div>
+          <div class="phone-screen-content">
+            <img src="/images/hero-home-screen.png" alt="HeelFix App Home Screen showing photo analysis, AI staging, targeted routines and progress tracking" class="app-screenshot" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Journey Ribbon -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="journey-strip">
+        <div class="journey-step">
+          <div class="journey-num">1</div>
+          <div class="journey-info">
+            <span class="journey-title">Take a Photo</span>
+            <span class="journey-sub">Snap a heel picture</span>
+          </div>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-num">2</div>
+          <div class="journey-info">
+            <span class="journey-title">Get AI Insights</span>
+            <span class="journey-sub">Instant staging & scores</span>
+          </div>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-num">3</div>
+          <div class="journey-info">
+            <span class="journey-title">Track Progress</span>
+            <span class="journey-sub">Weekly metric trends</span>
+          </div>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-num">4</div>
+          <div class="journey-info">
+            <span class="journey-title">Re-Scan</span>
+            <span class="journey-sub">Optimal follow-up window</span>
+          </div>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step highlight">
+          <div class="journey-num">5</div>
+          <div class="journey-info">
+            <span class="journey-title">See Improvement</span>
+            <span class="journey-sub">Objective results</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 — AI Analysis -->
+  <section class="section ai-analysis-section" id="ai-analysis">
+    <div class="container">
+      <div class="product-showcase-grid">
+        <div class="showcase-text">
+          <span class="section-tag">AI Photo Staging</span>
+          <h2 class="section-title">Understand What Your Heel Scan Shows</h2>
+          <p class="section-desc">
+            HeelFix turns a simple heel photo into clear, structured skin insights. Advanced computer vision evaluates surface dryness, crack severity, and callus buildup in seconds.
+          </p>
+
+          <div class="showcase-feature-list">
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <h4>Instant Severity Tiers</h4>
+                <p>Categorizes skin state into clear tiers (such as <em>Mild</em>, <em>Moderate</em>, or <em>Normal</em>) so you know exactly where you stand.</p>
+              </div>
+            </div>
+
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <h4>What the AI Found</h4>
+                <p>Breaks down individual indicators (Dryness, Cracks, Callus) with 1/3 severity scales and plain-English explanations.</p>
+              </div>
+            </div>
+
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h4>Targeted Actionable Guidance</h4>
+                <p>Provides daily hydration and care recommendations matching your specific skin state.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-visual">
+          <div class="phone-mockup-frame">
+            <div class="phone-dynamic-island"></div>
+            <div class="phone-screen-content">
+              <img src="/images/hero-results-screen.png" alt="HeelFix Your Results Screen displaying AI findings" class="app-screenshot" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Progress Tracking -->
+  <section class="section progress-section" id="progress-tracking">
+    <div class="container">
+      <div class="product-showcase-grid reverse">
+        <div class="showcase-visual">
+          <div class="phone-mockup-frame mockup-dominant">
+            <div class="phone-dynamic-island"></div>
+            <div class="phone-screen-content">
+              <img src="/images/weekly-progress-screen.jpg" alt="HeelFix Weekly Progress Screen showing Next Recommended Scan and trend chart" class="app-screenshot" />
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-text">
+          <span class="section-tag">Track Changes Over Time</span>
+          <h2 class="section-title">Track Your Progress Over Time</h2>
+          <p class="section-desc">
+            Skin improvements happen gradually. HeelFix charts your weekly progress and prompts you when it's time for your next scan.
+          </p>
+
+          <div class="showcase-feature-list">
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h4>Next Recommended Scan Timer</h4>
+                <p>Calculates optimal follow-up timing (e.g. <em>In 6 days</em>) to avoid misleading daily noise and measure true visual changes.</p>
+              </div>
+            </div>
+
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <h4>Weekly Progress Trend</h4>
+                <p>Organizes scans by week (e.g., Week 33) with visual trend graphs that plot your skin recovery trajectory over time.</p>
+              </div>
+            </div>
+
+            <div class="showcase-feature-item">
+              <div class="showcase-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+              </div>
+              <div>
+                <h4>Scan History & Status</h4>
+                <p>Keep track of your total scans, baseline date, and current skin status (e.g. <em>Mild, On Track</em>).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 5 — Premium Showcase & Subscription -->
+  <section class="section premium-section" id="premium">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">HeelFix Premium</span>
+        <h2 class="section-title">Get Healthier Heels with Personalized AI Care</h2>
+        <p class="section-desc">
+          Unlock complete photo analysis, personalized daily routines, progress tracking, and smart re-scan reminders.
+        </p>
+      </div>
+
+      <div class="premium-layout">
+        <!-- Supporting Visual Column -->
+        <div class="premium-visual">
+          <div class="phone-mockup-frame premium-phone">
+            <div class="phone-dynamic-island"></div>
+            <div class="phone-screen-content">
+              <img src="/images/heelfix-premium-screen.png" alt="HeelFix Premium subscription screen displaying plan options and features" class="app-screenshot" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Cards & Features Column -->
+        <div class="premium-content">
+          <div class="premium-badge-banner">
+            <span>Built for people managing dry, cracked heels</span>
+          </div>
+
+          <ul class="premium-features-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Photo Analysis & AI Staging</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Targeted Care Routine</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Progress Tracking & Trend Graphs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Before & After Photo Comparison</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Smart Re-scan Reminders</span>
+            </li>
+          </ul>
+
+          <div class="pricing-cards-grid">
+            <div class="pricing-card">
+              <span class="plan-name">Weekly</span>
+              <div class="plan-price">$2.99<span>/wk</span></div>
+              <span class="plan-trial">No trial</span>
+            </div>
+
+            <div class="pricing-card">
+              <span class="plan-name">Monthly</span>
+              <div class="plan-price">$4.99<span>/mo</span></div>
+              <span class="plan-trial">No trial</span>
+            </div>
+
+            <div class="pricing-card featured">
+              <span class="best-value-pill">Best Value</span>
+              <span class="plan-name">Annual</span>
+              <div class="plan-price">$29.99<span>/yr</span></div>
+              <span class="plan-trial highlight">7 days free</span>
+            </div>
+          </div>
+
+          <div class="premium-cta-wrap">
+            <a href="https://apps.apple.com/app/heelfix/id123456789" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl full-width">
+              Start Free Trial
+            </a>
+            <span class="sub-cta-note">Cancel anytime in App Store settings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Educational Skin Guide -->
+  <section class="section guide-section" id="guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Educational Skin Guide</span>
+        <h2 class="section-title">Understanding Heel Skin Health</h2>
+        <p class="section-desc">
+          Everything you need to know about why heel skin cracks, peels, or thickens—and how to care for it effectively.
+        </p>
+      </div>
+
+      <div class="guide-grid">
+        <article class="guide-card">
+          <div class="guide-badge">Causes</div>
+          <h3>Why are my heels so dry and cracked?</h3>
+          <p>
+            Dry cracked heels typically develop when dry heel skin loses moisture and thickens into tough calluses. Because heel skin naturally lacks oil glands, everyday pressure and friction from walking or standing can cause hardened heel calluses to split into visible cracks or heel fissures.
+          </p>
+          <ul class="guide-list">
+            <li>Frequent open-back footwear or barefoot walking</li>
+            <li>Prolonged standing on hard flooring surfaces</li>
+            <li>Dry indoor heating and low atmospheric humidity</li>
+          </ul>
+          <p>
+            Because cracked heel causes develop gradually, paying attention to visible skin changes helps you stay aware of your heel health.
+          </p>
+        </article>
+
+        <article class="guide-card">
+          <div class="guide-badge">Visual Signs</div>
+          <h3>What does dry, peeling heel skin look like?</h3>
+          <p>
+            Dry heel skin can present in several visible stages. Early dryness often appears as rough heel skin with fine surface flaking or peeling heel skin as surface layers turn over.
+          </p>
+          <p>
+            Over time, continued dryness can form thicker callused skin around the heel rim, which may lead to visible cracks and uneven heel skin texture. Because these skin texture changes unfold subtly across several days, tracking their visual appearance with consistent photos makes it easier to observe patterns and stay proactive.
+          </p>
+        </article>
+
+        <article class="guide-card">
+          <div class="guide-badge">Care Routine</div>
+          <h3>What is a simple routine for dry heel skin?</h3>
+          <p>
+            An effective dry heel care routine focuses on softening tough areas and supporting routine consistency:
+          </p>
+          <ol class="guide-list-numbered">
+            <li><strong>Hydrate and soften:</strong> Apply a rich heel moisturizer or urea-based heel balm to help soften heel calluses and hydrate dry skin.</li>
+            <li><strong>Lock in moisture:</strong> Use an overnight heel care step with a protective balm and breathable cotton socks while resting.</li>
+            <li><strong>Gentle smoothing:</strong> Lightly buff rough heel skin after bathing to help smooth rough surface texture.</li>
+          </ol>
+          <p>
+            Because moisturizing cracked heels takes days of consistent care to show visible changes, comparing skin appearance over time is far more reliable than guessing from memory.
+          </p>
+        </article>
+
+        <article class="guide-card">
+          <div class="guide-badge">Progress Tracking</div>
+          <h3>How can I track my heel skin progress over time?</h3>
+          <p>
+            Visible skin changes develop gradually over several days. Because day-to-day memory can make subtle shifts hard to notice, visual tracking with standardized heel photo tracking provides an objective way to monitor cracked heels and observe your heel skin progress.
+          </p>
+          <p>
+            By capturing a baseline photo under consistent lighting and taking follow-up photos after several days, side-by-side photo comparisons reveal clear before and after heel skin appearance. HeelFix is built to make this simple—helping you maintain a visual baseline, set re-scan reminders, and follow your skin’s visual journey over time.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Got Questions? We Have Answers.</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is HeelFix a medical diagnostic app?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. HeelFix is a visual self-awareness and heel health tracking tool, not a medical diagnostic app. It helps you monitor visible changes in your heel skin over time, including dryness, cracks, callus, and skin texture.</p>
+            <p style="margin-top: 10px;">HeelFix does not diagnose heel pain, plantar fasciitis, or other medical conditions, and it is not a substitute for professional medical advice or podiatric care.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can HeelFix help me monitor dry or cracked heels?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. HeelFix is designed to help you monitor visible signs of dry heels, cracked heels, callus, and changes in heel skin appearance over time.</p>
+            <p style="margin-top: 10px;">By taking consistent heel photos, you can compare changes between scans and better understand whether your visible skin condition is improving, staying the same, or becoming more noticeable.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does the HeelFix AI heel scan work?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>HeelFix uses computer vision to analyze visible characteristics of your heel skin, including surface dryness, visible cracks, callus, and skin texture.</p>
+            <p style="margin-top: 10px;">Your heel photo is categorized into clear severity levels to help you monitor changes over time. HeelFix is a visual assessment tool and does not provide a medical diagnosis.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can HeelFix detect plantar fasciitis or diagnose heel pain?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. Plantar fasciitis and heel pain can have many different causes, and a photo-based scan cannot replace a clinical examination.</p>
+            <p style="margin-top: 10px;">HeelFix focuses on visible heel skin characteristics rather than diagnosing medical conditions. If you experience persistent heel pain, severe pain, swelling, redness, or other concerning symptoms, you should consult a qualified healthcare professional.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How often should I scan my heels?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>HeelFix calculates a recommended heel scan follow-up interval, typically between 2 and 7 days, based on your baseline scan.</p>
+            <p style="margin-top: 10px;">Consistent photos taken under similar conditions make it easier to compare visible changes in your heel skin and track your progress over time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does heel health progress tracking work?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>HeelFix records each scan and tracks visible metrics including dryness, cracks, callus, and skin texture.</p>
+            <p style="margin-top: 10px;">Your results are displayed over time so you can see changes in your heel health and understand your visual progress from one scan to the next.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I check my heel health at home?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>HeelFix makes it easy to perform a heel health check at home using your iPhone.</p>
+            <p style="margin-top: 10px;">Simply capture a clear photo of your heel and HeelFix analyzes the visible skin characteristics. This is designed for self-awareness and progress tracking, not medical diagnosis.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is my heel photo data private?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. HeelFix is designed with privacy in mind.</p>
+            <p style="margin-top: 10px;">Your photos are handled using privacy-focused security practices, and we do not sell your personal data. HeelFix is designed to help you monitor your heel health while keeping privacy at the center of the experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>When should I see a podiatrist or doctor for heel problems?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>You should seek professional medical advice if your heel pain is persistent or severe, or if your heel cracks bleed, become increasingly painful, or are accompanied by redness, swelling, or other concerning symptoms.</p>
+            <p style="margin-top: 10px;">You should also consult a healthcare professional if you have diabetes, neuropathy, circulation problems, or another condition that may affect foot health.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I need a subscription to use the HeelFix heel scan?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>HeelFix requires an active subscription to access its scanning features. Annual subscribers receive the promotional scan allowance described in the subscription plan.</p>
+            <p style="margin-top: 10px;">Check the subscription screen in the app for the current plan details and included benefits.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is HeelFix available on iPhone?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. HeelFix is available for iPhone running iOS 17.0 or later.</p>
+            <p style="margin-top: 10px;">The app is designed to make heel health tracking and heel skin monitoring simple from your iPhone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="brand-name">HeelFix</span>
+        </a>
+        <p class="footer-tagline">Understand Your Heel Skin. Track Your Progress.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#ai-analysis">AI Analysis</a>
+          <a href="#progress-tracking">Progress Tracking</a>
+          <a href="#premium">Premium</a>
+          <a href="#guide">Skin Guide</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <a href="/contact.html">Contact Us</a>
+          <a href="#safety">Medical Disclaimer</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HeelFix. All rights reserved. Not a medical device.</p>
+    </div>
+  </footer>
+
+  <!-- Medical Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimerModal" aria-hidden="true" role="dialog" aria-labelledby="disclaimerTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeDisclaimer" aria-label="Close disclaimer modal">&times;</button>
+      <div class="safety-card modal-safety-card">
+        <div class="safety-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        </div>
+        <div class="safety-content">
+          <h3 id="disclaimerTitle">Medical Disclaimer & Professional Care Guidance</h3>
+          <p>
+            HeelFix is strictly an educational and visual self-tracking application. It does <strong>not</strong> provide medical diagnoses, treatment advice, or clinical evaluations.
+          </p>
+          <p class="safety-warning">
+            <strong>When to see a doctor:</strong> If your heel cracks are deep, painful, bleeding, showing signs of infection (redness, warmth, pus), or if you have diabetes, neuropathy, or poor circulation, consult a qualified podiatrist or healthcare professional immediately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

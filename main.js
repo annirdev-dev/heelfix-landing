@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Build mailto fallback link
         const subjectEncoded = encodeURIComponent(`[HeelFix] ${topic} - ${name}`);
         const bodyEncoded = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\nMessage:\n${message}`);
-        const mailtoUrl = `mailto:annirdev@gmail.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
+        const mailtoUrl = `mailto:contact@heelfixcare.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
 
         if (directMailLink) {
           directMailLink.setAttribute('href', mailtoUrl);

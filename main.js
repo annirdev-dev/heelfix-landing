@@ -159,13 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isValid) {
         const submitBtn = document.getElementById('submitBtn');
+        const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span>Sending...</span>';
+          submitBtn.innerHTML = '<span>Sending message...</span>';
         }
 
-        // Build mailto fallback link
-        const subjectEncoded = encodeURIComponent(`[HeelFix] ${topic} - ${name}`);
+        const subject = `[HeelFix Inquiry] ${topic} - ${name}`;
+        const subjectEncoded = encodeURIComponent(subject);
         const bodyEncoded = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\nMessage:\n${message}`);
         const mailtoUrl = `mailto:contact@heelfixcare.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
 
@@ -173,22 +174,52 @@ document.addEventListener('DOMContentLoaded', () => {
           directMailLink.setAttribute('href', mailtoUrl);
         }
 
-        setTimeout(() => {
-          contactForm.style.display = 'none';
-          if (contactSuccess) {
-            contactSuccess.style.display = 'block';
-          }
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = `
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-              <span>Send Message</span>
-            `;
-          }
-        }, 400);
+        const payload = {
+          access_key: 'd407d642-5985-487c-903c-0006a7b5554b',
+          name: name,
+          email: email,
+          subject: subject,
+          topic: topic,
+          message: message,
+          from_name: 'HeelFix Landing Page Contact Form',
+        };
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        })
+          .then(async (response) => {
+            const data = await response.json().catch(() => ({}));
+            if (response.ok && data.success !== false) {
+              contactForm.style.display = 'none';
+              if (contactSuccess) {
+                contactSuccess.style.display = 'block';
+              }
+            } else {
+              alert(data.message || 'There was an issue sending your message. Please click "Open in Email App" to contact us directly.');
+              contactForm.style.display = 'none';
+              if (contactSuccess) {
+                contactSuccess.style.display = 'block';
+              }
+            }
+          })
+          .catch((err) => {
+            console.error('Contact form submission error:', err);
+            contactForm.style.display = 'none';
+            if (contactSuccess) {
+              contactSuccess.style.display = 'block';
+            }
+          })
+          .finally(() => {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnContent;
+            }
+          });
       }
     });
 
